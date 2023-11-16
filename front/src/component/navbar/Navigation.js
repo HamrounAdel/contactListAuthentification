@@ -11,13 +11,6 @@ function Navigation({auth,logout}) {
         
       </div>
     </div>
-    <div className="nav-btn">
-      <label for="nav-check">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
-    </div>
     
     <ul class="nav-list">
       <li><a   href='#' >{auth.name}</a></li>
@@ -27,7 +20,7 @@ function Navigation({auth,logout}) {
 
       </>) :(<>
 
-      <li><a ><Link to='/Auth/home'>Home</Link></a></li>
+      <li><a ><Link to='/home'>Home</Link></a></li>
       <li><a ><Link to='/contact'>Contact</Link></a></li>
       <li><a ><Link to='/add'>AjoutContact</Link></a></li>
 

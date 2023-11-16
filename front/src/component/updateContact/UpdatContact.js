@@ -2,7 +2,10 @@ import React,{useState} from 'react'
 import '../ajoutContact/AddContact.css'
 import { useNavigate,useParams } from 'react-router-dom'
 import {putContact} from '../../api/ContactApi'
+import Navigation from '../navbar/Navigation'
+import { useSelector } from 'react-redux'
 function UpdatContact() {
+  const auth = useSelector(state => state.Auth)
   const navigate=useNavigate()
   const {id}=useParams()
 const[name,setName]=useState('')
@@ -15,7 +18,14 @@ const handelupdate=async(id,value)=>{
  await putContact(id,value)
  navigate('/contact')
 }
+const logout = () => {
+  localStorage.removeItem('token')
+  navigate('/auth')
+}
+
   return (
+    <>
+    <Navigation auth={auth} logout={logout} />
     <div className='bodyadd'>
       
     <div className="container ">
@@ -76,6 +86,7 @@ const handelupdate=async(id,value)=>{
   </form>
 </div>
 </div>
+</>
   )
 }
 

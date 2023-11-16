@@ -15,6 +15,19 @@ const [password,setPassword]=useState('')
   }
 
   return (
+    <div>
+      <header>
+      <nav className="nav">
+    <div className="nav-header">
+    </div>
+    <ul class="nav-list">
+      <li><a   href='/register' >Register</a></li>
+
+      <li><a href='/'>Login</a></li>
+    </ul>
+  
+  </nav>
+      </header>
     <div className='bodylogin'>
     <div className="form-wrapper">
   <h1>Sign In</h1>
@@ -62,6 +75,7 @@ const [password,setPassword]=useState('')
   </div>
 </div>
 
+  </div>
   </div>
   )
 }

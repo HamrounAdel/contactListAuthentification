@@ -24,7 +24,7 @@ function App() {
       <Route path='/' element={<Login/>}  />
       <Route path='/register'   element={<Register/>} />
       <Route path='/Auth' element={ <Authen/>}/>
-      <Route path='/Auth/home' element={ <Homepage/> }/>   
+      <Route path='/home' element={ <Homepage/> }/>   
       <Route path='/add' element={  <AddContact/>} />
       <Route path='/contact' element={<ContactList/>} />
       <Route path='/update/:id'  element={<UpdatContact/>}/>

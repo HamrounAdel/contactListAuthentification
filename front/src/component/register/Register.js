@@ -15,6 +15,20 @@ function Register() {
   
   }
   return (
+    <div>
+       <header>
+      <nav className="nav">
+    <div className="nav-header">
+      
+    </div>
+    
+    <ul class="nav-list">
+      <li><a   href='/register' >Register</a></li>
+      <li><a href='/'>Login</a></li>
+    </ul>
+  </nav>
+      </header>
+
     <div className='bodylogin'>
     <div className="form-wrapper">
   <h1>Create Account</h1>
@@ -76,6 +90,7 @@ function Register() {
   
 </div>
 
+  </div>
   </div>
   )
 }
