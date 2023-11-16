@@ -11,7 +11,7 @@ function Register() {
 
   const handelregister=async(value)=>{
     await registerUser(value)
-  navigate('/login')
+  navigate('/')
   
   }
   return (

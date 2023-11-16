@@ -9,7 +9,7 @@ import Admin from './Admin'
 import Users from './Users'
 import Login from '../login/Login'
 import Navigation from '../navbar/Navigation'
-function Home() {
+function Authen() {
   const auth = useSelector(state=>state.Auth)
   console.log('auth =>', auth)
 
@@ -46,4 +46,4 @@ token ? (<><Navigation auth={auth} logout={logout}   />
   )
 }
 
-export default Home
+export default Authen

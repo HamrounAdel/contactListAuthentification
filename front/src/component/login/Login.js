@@ -7,11 +7,11 @@ function Login() {
 const [email,setEmail]=useState('')
 const [password,setPassword]=useState('')
   
- const submitLogin=async(values)=>{
+ const handelLogin=async(values)=>{
     const res = await axios.post('http://localhost:5002/auth/login',values)
     await console.log('reponse login', res.data.token)
   await localStorage.setItem('token',res.data.token)
-  navigate('/home')
+  navigate('/auth')
   }
 
   return (
@@ -47,13 +47,14 @@ const [password,setPassword]=useState('')
         className="button"
         title="Sign In"
         defaultValue="Sign In"
-        onClick={()=>submitLogin({email,password})}
+        onClick={()=>handelLogin({email,password})}
       />
     </div>
   </form>
   <div className="form-footer">
     <p>
-      <a href="/" >Create an account</a>
+      <a href="/register
+      " >Create an account</a>
     </p>
     <p>
       <a href="#">Forgot password?</a>

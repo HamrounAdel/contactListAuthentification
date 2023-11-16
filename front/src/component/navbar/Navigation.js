@@ -27,7 +27,7 @@ function Navigation({auth,logout}) {
 
       </>) :(<>
 
-      <li><a ><Link to='/home'>Home</Link></a></li>
+      <li><a ><Link to='/Auth/home'>Home</Link></a></li>
       <li><a ><Link to='/contact'>Contact</Link></a></li>
       <li><a ><Link to='/add'>AjoutContact</Link></a></li>
 

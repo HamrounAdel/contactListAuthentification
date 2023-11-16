@@ -13,7 +13,7 @@
     margin: auto;
   }
   
-  /*.menu {
+  .menu {
     float: right;
     list-style: none;
     margin-top: 30px;
@@ -34,7 +34,7 @@
   .menu ul li a:hover {
     color: rgb(199, 139, 255);
   }
-  */
+  
   /* .logo{
       height: 20%;
       float: left;
