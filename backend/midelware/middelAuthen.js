@@ -1,15 +1,22 @@
-var jwt =require('jsonwebtoken')
-const userSchema =require('../model/userModel')
+var jwt = require('jsonwebtoken');
 
-exports.auth =async(req,res,next)=>{
+
+const userSchema = require('../model/userModel')
+
+exports.auth=async(req,res,next)=>{
     try{
-       const token =req.header('Authorisation')
-       var  test = jwt.verify(token,process.env.privatKey)
-       if(!test){return res.json({errors})}
-       const user =  await userSchema.findById(test.id)
-       res.user =user
-       next()
+
+     const token = req.header('Authorization')
+
+     var decoder = jwt.verify(token,process.env.privatKey)
+
+     if(!decoder){return res.status(404).json({msg:'ynejimich yodkhel'})}
+
+     const user = await userSchema.findById(decoder.id)
+     req.user = user
+
+        next()
     }catch(err){
-        console.log(err)
+      console.log(err)
     }
 }

@@ -23,7 +23,7 @@ const handelAdd=async(value)=>{
 
   const logout = () => {
     localStorage.removeItem('token')
-    navigate('/auth')
+    navigate('/')
   }
 
   return (

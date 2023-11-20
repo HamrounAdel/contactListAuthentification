@@ -1,5 +1,4 @@
 import React from 'react'
-
 import {setAuth} from '../../redux/authSlice'
 import { useNavigate } from 'react-router-dom'
 import {useDispatch,useSelector} from 'react-redux'
@@ -18,6 +17,7 @@ const navigate = useNavigate()
 const getAcc=async()=>{
   const data = await getAccount()
   console.log('data login', data)
+  
   dispatch(setAuth(data))
 }
 
@@ -27,7 +27,7 @@ useEffect(()=>{
 
 const logout=()=>{
   localStorage.removeItem('token')
-  navigate('/login')
+  navigate('/')
 }
 
 const token = localStorage.getItem('token')

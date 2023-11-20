@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './login.css'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+
 function Login() {
   const navigate =useNavigate()
 const [email,setEmail]=useState('')
@@ -10,8 +11,8 @@ const [password,setPassword]=useState('')
  const handelLogin=async(values)=>{
     const res = await axios.post('http://localhost:5002/auth/login',values)
     await console.log('reponse login', res.data.token)
-  await localStorage.setItem('token',res.data.token)
-  navigate('/auth')
+    await localStorage.setItem('token',res.data.token)
+    navigate('/auth')
   }
 
   return (
@@ -22,10 +23,8 @@ const [password,setPassword]=useState('')
     </div>
     <ul class="nav-list">
       <li><a   href='/register' >Register</a></li>
-
       <li><a href='/'>Login</a></li>
     </ul>
-  
   </nav>
       </header>
     <div className='bodylogin'>

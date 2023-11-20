@@ -22,7 +22,7 @@ useEffect(()=>{
 
 const logout = () => {
   localStorage.removeItem('token')
-  navigate('/auth')
+  navigate('/')
 }
 
   return (

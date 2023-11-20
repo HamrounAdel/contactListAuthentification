@@ -1,6 +1,6 @@
 const express = require('express')
 const app =express()
-const port = 5002
+const port = process.env.PORT || 5002
 const cors = require('cors')
 const connectdb =require('./config/db')
 const contactRoute=require('./routes/contactRoute')

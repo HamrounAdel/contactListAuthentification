@@ -26,7 +26,7 @@ function Navigation({auth,logout}) {
 
       </>)}
 
-         <li><a href="#"  onClick={()=>logout()}>Deconnecte</a></li> 
+         <li><a  onClick={()=>logout()}>Deconnecte</a></li> 
       
     </ul>
   

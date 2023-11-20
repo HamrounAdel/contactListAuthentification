@@ -10,14 +10,7 @@ const contactSlice=createSlice({
           note:"fhjgk",
           typeuser:"client",
                 },
-          {
-             name:"hamroun",
-          lastName:"adel",
-          email:"you@gmail.fr",
-          phone:21245673,
-          note:"fhjgknjkkjjk",
-          typeuser:"client",
-        }
+         
     ]),
     reducers:{
       setContact:(state,action)=>{
