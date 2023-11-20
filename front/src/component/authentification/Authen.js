@@ -9,6 +9,7 @@ import Users from './Users'
 import Login from '../login/Login'
 import Navigation from '../navbar/Navigation'
 function Authen() {
+
   const auth = useSelector(state=>state.Auth)
   console.log('auth =>', auth)
 
@@ -20,7 +21,6 @@ const getAcc=async()=>{
   
   dispatch(setAuth(data))
 }
-
 useEffect(()=>{
   getAcc()
 },[])

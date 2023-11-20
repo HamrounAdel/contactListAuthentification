@@ -8,7 +8,7 @@ const authSlice=createSlice({
           lastName:"adel",
           email:"yah@gmail.fr",
           password:'adel2965',
-          role:"admin",
+          role:"user",
                 }
          
     ),

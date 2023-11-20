@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 function Login() {
+
   const navigate =useNavigate()
 const [email,setEmail]=useState('')
 const [password,setPassword]=useState('')
@@ -69,7 +70,7 @@ const [password,setPassword]=useState('')
       " >Create an account</a>
     </p>
     <p>
-      <a href="#">Forgot password?</a>
+      <a href="">Forgot password?</a>
     </p>
   </div>
 </div>
